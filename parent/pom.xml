@@ -27,10 +27,18 @@
 		<jpa.version>1.0.2</jpa.version>
 		<jdk.version>1.6</jdk.version>
 		
+		<dao.version>1.0.0</dao.version>
 	</properties>
 	
 	<dependencyManagement>
 		<dependencies>
+			<!-- dao beigin -->
+			<dependency>
+				<groupId>org.fang</groupId>
+				<artifactId>dao</artifactId>
+				<version>${dao.version}</version>
+			</dependency>
+		
 			<!-- SPRING basic begin -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -102,6 +110,13 @@
 				<version>${hibernate.version}</version>
 			</dependency>
 
+			<!-- JSR303  BeanValidator -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate-validator.version}</version>
+			</dependency>
+			
 			<!-- spring data jpa -->
 			<dependency>
 				<groupId>org.springframework.data</groupId>
